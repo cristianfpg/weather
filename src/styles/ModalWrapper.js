@@ -20,4 +20,10 @@ export const ModalWrapper = styled.div`
     cursor: pointer;
     font-size: 20px;
   }
+  & .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 `

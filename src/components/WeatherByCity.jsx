@@ -2,7 +2,7 @@ import { WeatherWrapper } from "../styles/WeatherWrapper"
 import { memo } from "react";
 import PropTypes from 'prop-types';
 
-const WeatherByCity = memo(function WeatherByCity({data}) {
+const WeatherByCity = memo(function WeatherByCity({data,width}) {
   if (!data || !data.forecast) return <div></div>
   const { location, current } = data
   const forecastDay = data.forecast.forecastday[1].day
@@ -12,7 +12,7 @@ const WeatherByCity = memo(function WeatherByCity({data}) {
   const minutes = String(date.getMinutes()).padStart(2, "0");
 
   console.log(data)
-  return <WeatherWrapper $is_day={current.is_day}>
+  return <WeatherWrapper $is_day={current.is_day} $width={width}>
     <div className="data">
       <div className="title">
         <img src={ current.condition.icon } alt={current.condition.text}></img>

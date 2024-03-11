@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const WeatherWrapper = styled.div`
-  width: 48%;
+  width: ${props => props.$width}%;
   display: flex;
   height: 160px;
   margin: 1%;
