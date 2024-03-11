@@ -4,11 +4,13 @@ import { AppWrapper } from "./styles/AppWrapper.js"
 import { ButtonModal } from "./styles/ButtonModal.js"
 import WeatherByCity from "./components/WeatherByCity.jsx";
 import ModalContent from "./components/ModalContent.jsx";
+import { handleFetch } from "./app/functions.js";
 
 function App() {
   const [allData, setAllData] = useState([]) 
   const [showModal, setShowModal] = useState(false);
 
+  /*
   async function handleFetch(q) {
     const options = {
       method: "GET"
@@ -17,7 +19,7 @@ function App() {
     const response = await fetch(url, options);
     const result = await response.text();
     return result
-  }
+  }*/
 
   const fetchDefaultPlaces = useCallback(()=>{
     const places = ['colombia', 'australia', 'egypt', 'chicago', 'india', 'poland'];
